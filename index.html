@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Портфолио - Сагутдинова Илона</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'font';
+            src: url(../fonts/GoshaSans-Regular.otf);
+        }
+
+        body {
+            font-family: 'font', Arial, sans-serif;
+            background-color: #E9FEFF;
+            color: #2d3e50;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* ===== ШАПКА ===== */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background-color: #F13450;
+            box-shadow: 0 4px 10px rgba(241, 52, 80, 0.3);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            padding: 12px 8px;
+            gap: 8px 12px;
+            flex-wrap: wrap;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .nav a:hover {
+            background-color: white;
+            color: #F13450;
+            transform: translateY(-2px);
+        }
+
+        /* ===== ОБЩИЕ СТИЛИ ===== */
+        section {
+            padding: 40px 16px;
+        }
+
+        section h1 {
+            text-align: center;
+            font-size: 32px;
+            color: #F13450;
+            margin-bottom: 30px;
+            word-break: break-word;
+        }
+
+        /* ===== ГЛАВНАЯ ===== */
+        .main_section {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .main_section h3 {
+            color: #666;
+            font-size: 16px;
+            margin: 6px 0;
+        }
+
+        .main_section h1 {
+            font-size: 34px;
+            color: #F13450;
+            margin: 20px 0 16px;
+        }
+
+        .main_section img {
+            width: 160px;
+            height: 160px;
+            border-radius: 20%;
+            object-fit: cover;
+            border: 5px solid #F13450;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .main_section p {
+            font-size: 17px;
+            margin: 8px 0;
+            color: #555;
+        }
+
+        /* ===== О СЕБЕ / КОМПЕТЕНЦИИ ===== */
+        .about_section {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .about_section h2 {
+            color: #F13450;
+            margin: 24px 0 16px;
+            font-size: 26px;
+        }
+
+        .about_section p {
+            font-size: 17px;
+            margin-bottom: 16px;
+        }
+
+        .about_section ul {
+            padding-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        .about_section ul li {
+            margin-bottom: 8px;
+            font-size: 16px;
+            word-break: break-word;
+        }
+
+        /* ===== ДОСТИЖЕНИЯ ===== */
+        .dost_section {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .dost_section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ===== РАБОТЫ ===== */
+        .work_section {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .work {
+            background: white;
+            padding: 20px 16px;
+            margin-bottom: 24px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .work:hover {
+            transform: translateY(-5px);
+        }
+
+        .work h2 {
+            color: #F13450;
+            margin-bottom: 12px;
+            font-size: 24px;
+        }
+
+        .work p {
+            font-size: 17px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        .work img {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            background: #f0f0f0;
+        }
+
+        /* ===== ДОКУМЕНТЫ ===== */
+        .document_section {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .document_section img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+        .gra_section {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* ===== КАРУСЕЛЬ ===== */
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: white;
+            touch-action: pan-y;
+        }
+
+        .carousel-slides {
+            display: flex;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            text-align: center;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain;
+            border-radius: 10px;
+            background: #f8f8f8;
+        }
+
+        .carousel-slide p {
+            margin-top: 12px;
+            font-size: 18px;
+            font-weight: 500;
+            color: #2d3e50;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(241, 52, 80, 0.8);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .carousel-btn:hover {
+            background: #F13450;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .prev-btn {
+            left: 8px;
+        }
+
+        .next-btn {
+            right: 8px;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 0 4px;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ccc;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: #F13450;
+            transform: scale(1.2);
+        }
+
+        .indicator:hover {
+            background: #F13450;
+            opacity: 0.7;
+        }
+
+        /* ===== ПОДВАЛ ===== */
+        footer {
+            background-color: #2d3e50;
+            color: white;
+            padding: 30px 16px;
+            text-align: center;
+            margin-top: 40px;
+            font-size: 15px;
+        }
+
+        /* ===== АДАПТИВ ДЛЯ ТЕЛЕФОНОВ ===== */
+        @media (max-width: 640px) {
+            section {
+                padding: 28px 12px;
+            }
+
+            section h1 {
+                font-size: 26px;
+                margin-bottom: 20px;
+            }
+
+            .nav {
+                padding: 10px 4px;
+                gap: 6px 8px;
+            }
+            .nav a {
+                font-size: 12px;
+                padding: 4px 8px;
+                white-space: nowrap;
+            }
+
+            .main_section {
+                padding: 20px 14px;
+            }
+            .main_section h1 {
+                font-size: 26px;
+            }
+            .main_section h3 {
+                font-size: 14px;
+            }
+            .main_section img {
+                width: 130px;
+                height: 130px;
+            }
+            .main_section p {
+                font-size: 15px;
+            }
+
+            .about_section {
+                padding: 20px 14px;
+            }
+            .about_section h2 {
+                font-size: 22px;
+                margin-top: 18px;
+            }
+            .about_section ul li {
+                font-size: 15px;
+            }
+            .about_section p {
+                font-size: 15px;
+            }
+
+            .work {
+                padding: 16px 12px;
+            }
+            .work h2 {
+                font-size: 20px;
+            }
+            .work p {
+                font-size: 15px;
+            }
+            .work img {
+                max-height: 220px;
+            }
+
+            .dost_section {
+                padding: 20px 14px;
+            }
+            .document_section {
+                padding: 20px 14px;
+            }
+            .gra_section {
+                padding: 20px 14px;
+            }
+
+            .carousel-btn {
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
+            }
+            .carousel-slide img {
+                max-height: 280px;
+            }
+            .carousel-slide p {
+                font-size: 15px;
+            }
+
+            footer {
+                padding: 24px 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .nav a {
+                font-size: 11px;
+                padding: 3px 6px;
+            }
+            .main_section h1 {
+                font-size: 22px;
+            }
+            .main_section img {
+                width: 110px;
+                height: 110px;
+            }
+            section h1 {
+                font-size: 22px;
+            }
+            .about_section h2 {
+                font-size: 20px;
+            }
+            .work h2 {
+                font-size: 18px;
+            }
+            .carousel-slide img {
+                max-height: 200px;
+            }
+            .carousel-btn {
+                width: 28px;
+                height: 28px;
+                font-size: 14px;
+            }
+        }
+
+        /* Планшеты и средние экраны */
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .nav {
+                gap: 12px 18px;
+            }
+            .nav a {
+                font-size: 15px;
+                padding: 8px 16px;
+            }
+            .main_section h1 {
+                font-size: 38px;
+            }
+            .carousel-slide img {
+                max-height: 450px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header_class">
+            <div class="nav">
+                <a href="#main">Главная</a>
+                <a href="#about">О себе</a>
+                <a href="#competencies">Компетенции</a>
+                <a href="#achievements">Достижения</a>
+                <a href="#works">Работы</a>
+                <a href="#documents">Документы</a>
+                <a href="#events">Я гражданин</a>
+            </div>
+        </div>
+    </header>
+    
+    <section id="main">
+        <div class="main_section">
+            <h3>Министерство образования Свердловской области</h3>
+            <h3>ГАПОУ СО "ЕКТС"</h3>
+            <h1>Сагутдинова Илона Ильнаровна</h1>
+            <img src="images/ava.jpg" alt="port">
+            <p>Информационные системы и программирование</p>
+            <p>Группа: ПР-31</p>
+        </div>
+    </section>
+    
+    <section id="about">
+        <div class="about_section">
+            <h1>О себе</h1>
+            <p>Стремлюсь стать востребованным специалистом</p>
+            <h2>Умения</h2>
+            <ul>
+                <li>Разработка простых мобильных приложений на android studio</li>
+                <li>Проектирование база данных</li>
+                <li>Работа с системами контроля версий git</li>
+                <li>Создание сайтов с помощью html, css, js</li>
+            </ul>
+            <h2>Личностные качества</h2>
+            <p>Ответственность, целеустремленность, коммуникабельность</p>
+        </div>
+    </section>
+    
+    <section id="competencies">
+        <div class="about_section"> 
+            <h1>Компетенции</h1>
+            <p>Перечень общих (ОК), профессиональных (ПК) и дополнительных профессиональных (ДПК) компетенций по специальности 09.02.07 "Информационные системы и программирование":</p>
+            
+            <h2>Общие компетенции (ОК)</h2>
+            <ul>
+                <li>ОК 01 Выбирать способы решения задач профессиональной деятельности применительно к различным контекстам</li>
+                <li>ОК 02 Использовать современные средства поиска, анализа и интерпретации информации и информационные технологии для выполнения задач профессиональной деятельности</li>
+                <li>ОК 03 Планировать и реализовывать собственное профессиональное и личностное развитие, предпринимательскую деятельность в профессиональной сфере, использовать знания по правовой и финансовой грамотности в различных жизненных ситуациях</li>
+                <li>ОК 04 Эффективно взаимодействовать и работать в коллективе и команде</li>
+                <li>ОК 05 Осуществлять устную и письменную коммуникацию на государственном языке Российской Федерации с учетом особенностей социального и культурного контекста</li>
+                <li>ОК 06 Проявлять гражданско-патриотическую позицию, демонстрировать осознанное поведение на основе традиционных российских духовно-нравственных ценностей, в том числе с учетом гармонизации межнациональных и межрелигиозных отношений, применять стандарты антикоррупционного поведения</li>
+                <li>ОК 07 Содействовать сохранению окружающей среды, ресурсосбережению, применять знания об изменении климата, принципы бережливого производства, эффективно действовать в чрезвычайных ситуациях</li>
+                <li>ОК 08 Использовать средства физической культуры для сохранения и укрепления здоровья в процессе профессиональной деятельности и поддержания необходимого уровня физической подготовленности</li>
+                <li>ОК 09 Пользоваться профессиональной документацией на государственном и иностранном языках</li>
+            </ul>
+            
+            <h2>Профессиональные компетенции (ПК) - Разработка программных модулей</h2>
+            <ul>
+                <li>ПК 1.1. Формировать алгоритмы разработки программных модулей в соответствии с техническим заданием</li>
+                <li>ПК 1.2. Разрабатывать программные модули в соответствии с техническим заданием</li>
+                <li>ПК 1.3. Выполнять отладку программных модулей с использованием специализированных программных средств</li>
+                <li>ПК 1.4. Выполнять тестирование программных модулей</li>
+                <li>ПК 1.5. Осуществлять рефакторинг и оптимизацию программного кода</li>
+                <li>ПК 1.6. Разрабатывать модули программного обеспечения для мобильных платформ</li>
+            </ul>
+            
+            <h2>Профессиональные компетенции (ПК) - Разработка и отладка программного обеспечения</h2>
+            <ul>
+                <li>ПК 2.1. Разрабатывать требования к программным модулям на основе анализа проектной и технической документации на предмет взаимодействия компонент</li>
+                <li>ПК 2.2. Выполнять интеграцию модулей в программное обеспечение</li>
+                <li>ПК 2.3. Выполнять отладку программного модуля с использованием специализированных программных средств</li>
+                <li>ПК 2.4. Осуществлять разработку тестовых наборов и тестовых сценариев для программного обеспечения</li>
+                <li>ПК 2.5. Производить инспектирование компонент программного обеспечения на предмет соответствия стандартам кодирования</li>
+            </ul>
+            
+            <h2>Профессиональные компетенции (ПК) - Сопровождение программного обеспечения</h2>
+            <ul>
+                <li>ПК 4.1. Осуществлять инсталляцию, настройку и обслуживание программного обеспечения компьютерных систем</li>
+                <li>ПК 4.2. Осуществлять измерения эксплуатационных характеристик программного обеспечения компьютерных систем</li>
+                <li>ПК 4.3. Выполнять работы по модификации отдельных компонент программного обеспечения в соответствии с потребностями заказчика</li>
+                <li>ПК 4.4. Обеспечивать защиту программного обеспечения компьютерных систем программными средствами</li>
+            </ul>
+            
+            <h2>Профессиональные компетенции (ПК) - Проектирование и разработка баз данных</h2>
+            <ul>
+                <li>ПК 11.1. Осуществлять сбор, обработку и анализ информации для проектирования баз данных</li>
+                <li>ПК 11.2. Проектировать базу данных на основе анализа предметной области</li>
+                <li>ПК 11.3. Разрабатывать объекты базы данных в соответствии с результатами анализа предметной области</li>
+                <li>ПК 11.4. Реализовывать базу данных в конкретной системе управления базами данных</li>
+                <li>ПК 11.5. Администрировать базы данных</li>
+                <li>ПК 11.6. Защищать информацию в базе данных с использованием технологии защиты информации</li>
+            </ul>
+            
+            <h2>Дополнительные профессиональные компетенции (ДПК)</h2>
+            <ul>
+                <li>ДПК 2.1 Использование системного анализа и методологий проектирования (например, унифицированного языка моделирования (Unified Modelling Language), программной платформы MVC (Model-View-Control), фреймворков, шаблонов проектирования)</li>
+                <li>ДПК 2.2 Работа с системой контроля версий</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="achievements">
+        <div class="dost_section">
+            <h1>Мои достижения</h1>
+            <img src="images/doc.jpg" alt="Сертификат">
+        </div>
+    </section>
+    
+    <section id="works">
+        <div class="work_section">
+            <h1>Работы</h1>
+            <div class="work">
+                <h2>Моя проектная деятельность по теме</h2>
+                <p>Индивидуальный проект на тему "Разработка игр на Godot"</p>
+                <img src="images/godot.webp" alt="Проект">
+            </div>
+        </div>
+    </section>
+    
+    <section id="documents">
+        <div class="document_section">
+            <h1>Документы</h1>
+            <img src="images/documents.jpg" alt="Документы">
+        </div>
+    </section>
+    
+    <section id="events">
+        <div class="gra_section">
+            <h1>Участие в мероприятиях</h1>
+            
+            <div class="carousel-container">
+                <div class="carousel-slides">
+                    <div class="carousel-slide">
+                        <img src="images/chemp.webp" alt="Мероприятие 1">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/sert.webp" alt="Мероприятие 2">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="images/nina.png" alt="Мероприятие 3">
+                    </div>
+                </div>
+                
+                <button class="carousel-btn prev-btn">&#10094;</button>
+                <button class="carousel-btn next-btn">&#10095;</button>
+                
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-index="0"></span>
+                    <span class="indicator" data-index="1"></span>
+                    <span class="indicator" data-index="2"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        Контакты: kupoles09@gmail.com
+    </footer>
+
+    <script>
+        document.querySelectorAll('.nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ===== КАРУСЕЛЬ =====
+        const slidesContainer = document.querySelector('.carousel-slides');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        const indicators = document.querySelectorAll('.indicator');
+
+        let currentIndex = 0;
+        const totalSlides = slides.length;
+
+        function updateCarousel(index) {
+            if (index < 0) index = totalSlides - 1;
+            if (index >= totalSlides) index = 0;
+            currentIndex = index;
+
+            slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            indicators.forEach((ind, i) => {
+                ind.classList.toggle('active', i === currentIndex);
+            });
+        }
+
+        prevBtn.addEventListener('click', () => updateCarousel(currentIndex - 1));
+        nextBtn.addEventListener('click', () => updateCarousel(currentIndex + 1));
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => updateCarousel(index));
+        });
+
+        // Автопрокрутка
+        let autoSlide = setInterval(() => updateCarousel(currentIndex + 1), 4000);
+
+        const carouselContainer = document.querySelector('.carousel-container');
+        carouselContainer.addEventListener('mouseenter', () => clearInterval(autoSlide));
+        carouselContainer.addEventListener('mouseleave', () => {
+            autoSlide = setInterval(() => updateCarousel(currentIndex + 1), 4000);
+        });
+
+        // Свайп для телефонов
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        carouselContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        carouselContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    updateCarousel(currentIndex + 1);
+                } else {
+                    updateCarousel(currentIndex - 1);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
